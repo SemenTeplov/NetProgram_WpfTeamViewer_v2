@@ -1,0 +1,29 @@
+﻿<Window x:Class="WpfTeamViewerServer.Views.ServerView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTeamViewerServer.Views"
+        mc:Ignorable="d"
+        Title="ServerView" FontSize="20" Height="250" Width="400">
+
+    <StackPanel Background="AliceBlue">
+        <Button Background="LightBlue" Command="{Binding StartCommand}">Start</Button>
+
+        <DockPanel>
+            <Label Width="100">IP</Label>
+            <TextBox Text="{Binding Ip}"></TextBox>
+        </DockPanel>
+        
+        <DockPanel>
+            <Label Width="100">Port</Label>
+            <TextBox Text="{Binding Port}"></TextBox>
+        </DockPanel>
+        
+        <StackPanel>
+            <TextBox Text="{Binding Mess}"></TextBox>
+            <Button Background="LightBlue" Command="{Binding SendCommand}">Send</Button>
+            <Button Background="LightBlue" Command="{Binding ScreenCommand}">Screenshot</Button>
+        </StackPanel>
+    </StackPanel>
+</Window>
